@@ -4,8 +4,8 @@ pub fn build(b: *std.Build) void {
     const target = b.standardTargetOptions(.{});
     const optimize = b.standardOptimizeOption(.{});
 
-    const module = b.addModule("mime", .{
-        .root_source_file = .{ .path = "mime.zig" },
+    const module = b.addModule("hello_world", .{
+        .root_source_file = .{ .path = "hello_world.zig" },
         .target = target,
         .optimize = optimize,
     });
@@ -15,7 +15,7 @@ pub fn build(b: *std.Build) void {
         .target = target,
         .optimize = optimize,
     });
-    unit_tests.root_module.addImport("mime", module);
+    unit_tests.root_module.addImport("hello_world", module);
     const run_unit_tests = b.addRunArtifact(unit_tests);
 
     const test_step = b.step("test", "Run unit tests");

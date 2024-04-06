@@ -1,11 +1,6 @@
 const std = @import("std");
-const mime = @import("mime");
+const hello = @import("hello_world");
 
-test "html smoke test" {
-    const mime_type = mime.extension_map.get(".html").?;
-    try std.testing.expectEqualStrings("text/html", @tagName(mime_type));
-}
-
-test "bogus extension" {
-    try std.testing.expect(mime.extension_map.get(".sillybogo") == null);
+test "Hello, World!" {
+    try std.testing.expectEqualStrings("Hello, World!", hello.hello_world());
 }
