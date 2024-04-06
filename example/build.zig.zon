@@ -1,0 +1,13 @@
+.{
+    .name = "example",
+    .version = "0.0.1",
+    .dependencies = .{
+        .hello_world = .{
+            .url = "https://github.com/zon-dev/hello-world/archive/refs/tags/0.0.1.tar.gz",
+            .hash = "1220f63b310bfdb188eac0fdc22e0ec139e05f900807b53743f7d6d81336239dd29b",
+        },
+    },
+    .paths = .{
+        "",
+    },
+}
